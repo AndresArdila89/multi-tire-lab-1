@@ -1,0 +1,11 @@
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\bin\Debug\Lab1_ConnectedMode2.exe.config
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\bin\Debug\Lab1_ConnectedMode2.exe
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\bin\Debug\Lab1_ConnectedMode2.pdb
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.csprojAssemblyReference.cache
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.GUI.FormTest.resources
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.Properties.Resources.resources
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.csproj.GenerateResource.cache
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.csproj.CoreCompileInputs.cache
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.exe
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.pdb
+C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.GUI.FormEmployee.resources
