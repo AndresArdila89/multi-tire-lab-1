@@ -79,5 +79,22 @@ namespace Lab1_ConnectedMode2.GUI
 
             MessageBox.Show(show, "EMPLOYEE LIST");
         }
+
+        private void FormTest_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openDB_Click(object sender, EventArgs e)
+        {
+            Employee andres = new Employee();
+
+            andres.FirstName = "andres";
+            andres.LastName = "ardila";
+            andres.JobTitle = "Developer";
+            
+            andres.SaveEmployee(andres);
+            MessageBox.Show("its time to test the database");
+        }
     }
 }

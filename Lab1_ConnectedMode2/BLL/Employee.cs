@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab1_ConnectedMode2.DAL;
 
 namespace Lab1_ConnectedMode2.BLL
 {
@@ -18,5 +19,10 @@ namespace Lab1_ConnectedMode2.BLL
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public string JobTitle { get => jobTitle; set => jobTitle = value; }
+
+        public void SaveEmployee(Employee emp)
+        {
+            EmployeeDB.SaveRecord(emp);
+        }
     }
 }

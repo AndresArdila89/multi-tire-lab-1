@@ -18,6 +18,7 @@ namespace Lab1_ConnectedMode2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormEmployee());
+            //Application.Run(new FormTest());
         }
     }
 }

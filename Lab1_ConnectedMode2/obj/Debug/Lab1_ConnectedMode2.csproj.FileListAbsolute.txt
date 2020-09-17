@@ -9,3 +9,14 @@ C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\L
 C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.exe
 C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.pdb
 C:\Users\andres\source\repos\Lab1_ConnectedMode2\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.GUI.FormEmployee.resources
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\bin\Debug\Lab1_ConnectedMode2.exe.config
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\bin\Debug\Lab1_ConnectedMode2.exe
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\bin\Debug\Lab1_ConnectedMode2.pdb
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.csprojAssemblyReference.cache
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.GUI.FormEmployee.resources
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.GUI.FormTest.resources
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.Properties.Resources.resources
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.csproj.GenerateResource.cache
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.exe
+C:\Users\andre\OneDrive\Desktop\3rd semester\Multi-tire Applications\Labs\multi-tire-lab-1\Lab1_ConnectedMode2\obj\Debug\Lab1_ConnectedMode2.pdb

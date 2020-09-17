@@ -16,7 +16,7 @@ namespace Lab1_ConnectedMode2.DAL
             SqlConnection connDB = UtilityDB.ConnectDB();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connDB;
-            cmd.CommandText = $"INSERT INTO Employees VALUES('{emp.EmployeeId}', '{emp.FirstName}','{emp.LastName}','{emp.JobTitle}')";
+            cmd.CommandText = $"INSERT INTO Employees (FirstName, LastName, JobTitle) VALUES('{emp.FirstName}','{emp.LastName}','{emp.JobTitle}')";
             cmd.ExecuteNonQuery();
             connDB.Close();
         }

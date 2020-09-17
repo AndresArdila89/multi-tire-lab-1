@@ -32,5 +32,39 @@ namespace Lab1_ConnectedMode2.GUI
             item.SubItems.Add("Programer");
             listView1.Items.Add(item);
         }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void comboBoxSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectIndex = comboBoxSearch.SelectedIndex;
+
+            switch (selectIndex)
+            {
+                case 0:
+                    lblSearch.Text = "Enter Employee ID";
+                    textBoxSearch.Clear();
+                    textBoxSearch.Focus();
+                    break;
+                case 1:
+                    lblSearch.Text = "Enter Employee First Name";
+                    textBoxSearch.Clear();
+                    textBoxSearch.Focus();
+                    break;
+                case 2:
+                    lblSearch.Text = "Enter Employee Last Name";
+                    textBoxSearch.Clear();
+                    textBoxSearch.Focus();
+                    break;
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
