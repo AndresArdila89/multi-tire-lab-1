@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab1_ConnectedMode2.BLL
 {
-    class Employee
+    public class Employee
     {
         private int employeeId;
         private string firstName;
