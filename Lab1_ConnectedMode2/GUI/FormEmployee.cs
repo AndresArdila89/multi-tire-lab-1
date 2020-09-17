@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab1_ConnectedMode2.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,6 +65,17 @@ namespace Lab1_ConnectedMode2.GUI
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+
+
+            //step 2: Store data in the object of type Employee
+
+            Employee emp = new Employee();
+            emp.EmployeeId = Convert.ToInt32(textBoxEmployeeID.Text);
+            emp.FirstName = textBoxFirstName.Text;
+            emp.LastName = textBoxLastName.Text;
+            emp.JobTitle = textBoxjobTitle.Text;
+
+            emp.SaveEmployee(emp);
 
         }
     }

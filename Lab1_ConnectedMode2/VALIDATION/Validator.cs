@@ -18,5 +18,17 @@ namespace Lab1_ConnectedMode2.VALIDATION
             }
             return true;
         }
+
+
+
+        public static bool IsValidName(string input)
+        {
+            return true;
+        }
+
+        public static bool IsEmpty(string input)
+        {
+            return true;
+        }
     }
 }

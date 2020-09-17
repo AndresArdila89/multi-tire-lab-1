@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxjobTitle = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -66,13 +66,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee Mainteance";
             // 
-            // textBox1
+            // textBoxEmployeeID
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 127);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxEmployeeID.Location = new System.Drawing.Point(125, 127);
+            this.textBoxEmployeeID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmployeeID.Name = "textBoxEmployeeID";
+            this.textBoxEmployeeID.Size = new System.Drawing.Size(68, 20);
+            this.textBoxEmployeeID.TabIndex = 1;
             // 
             // label2
             // 
@@ -94,13 +94,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "First Name";
             // 
-            // textBox2
+            // textBoxFirstName
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 151);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxFirstName.Location = new System.Drawing.Point(125, 151);
+            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(194, 20);
+            this.textBoxFirstName.TabIndex = 3;
             // 
             // label4
             // 
@@ -112,13 +112,13 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Last Name";
             // 
-            // textBox3
+            // textBoxLastName
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 175);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(194, 20);
-            this.textBox3.TabIndex = 5;
+            this.textBoxLastName.Location = new System.Drawing.Point(125, 175);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(194, 20);
+            this.textBoxLastName.TabIndex = 5;
             // 
             // label5
             // 
@@ -130,13 +130,13 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Job Title";
             // 
-            // textBox4
+            // textBoxjobTitle
             // 
-            this.textBox4.Location = new System.Drawing.Point(125, 199);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(194, 20);
-            this.textBox4.TabIndex = 7;
+            this.textBoxjobTitle.Location = new System.Drawing.Point(125, 199);
+            this.textBoxjobTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxjobTitle.Name = "textBoxjobTitle";
+            this.textBoxjobTitle.Size = new System.Drawing.Size(194, 20);
+            this.textBoxjobTitle.TabIndex = 7;
             // 
             // buttonSave
             // 
@@ -323,13 +323,13 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxjobTitle);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxFirstName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxEmployeeID);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEmployee";
             this.Text = "FormEmployee";
@@ -343,14 +343,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxEmployeeID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxjobTitle;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
