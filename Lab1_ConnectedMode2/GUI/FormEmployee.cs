@@ -28,11 +28,26 @@ namespace Lab1_ConnectedMode2.GUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ListViewItem item = new ListViewItem("2222");
-            item.SubItems.Add("Mary");
-            item.SubItems.Add("Brown");
-            item.SubItems.Add("Programer");
-            listView1.Items.Add(item);
+            List<Employee> empslist = new List<Employee>();
+            Employee records = new Employee();
+
+            empslist =  records.LoadAllEmployees();
+            
+            foreach (Employee em in empslist)
+            {
+
+                ListViewItem item = new ListViewItem(em.EmployeeId.ToString());
+                item.SubItems.Add(em.FirstName);
+                item.SubItems.Add(em.LastName);
+                item.SubItems.Add(em.JobTitle);
+                listView1.Items.Add(item);
+
+            }
+
+            
+            
+
+            
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -102,6 +117,7 @@ namespace Lab1_ConnectedMode2.GUI
                 emp.JobTitle = textBoxjobTitle.Text;
 
                 emp.SaveEmployee(emp);
+                
             }
                 
             

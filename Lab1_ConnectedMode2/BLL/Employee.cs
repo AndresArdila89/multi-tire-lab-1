@@ -24,5 +24,10 @@ namespace Lab1_ConnectedMode2.BLL
         {
             EmployeeDB.SaveRecord(emp);
         }
+
+        public List<Employee> LoadAllEmployees()
+        {
+            return EmployeeDB.LoadAllRecords();
+        }
     }
 }
