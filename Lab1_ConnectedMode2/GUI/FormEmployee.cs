@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Lab1_ConnectedMode2.VALIDATION;
 
 namespace Lab1_ConnectedMode2.GUI
 {
@@ -70,12 +71,42 @@ namespace Lab1_ConnectedMode2.GUI
             //step 2: Store data in the object of type Employee
 
             Employee emp = new Employee();
-            emp.EmployeeId = Convert.ToInt32(textBoxEmployeeID.Text);
-            emp.FirstName = textBoxFirstName.Text;
-            emp.LastName = textBoxLastName.Text;
-            emp.JobTitle = textBoxjobTitle.Text;
+            if (!Validator.IsValidId(textBoxEmployeeID.Text)){
+                MessageBox.Show("invalida Employee ID");
+                textBoxEmployeeID.Clear();
+                textBoxEmployeeID.Focus();
+            }
+            else if(!Validator.IsEmpty(textBoxFirstName.Text) || !Validator.IsValidName(textBoxFirstName.Text))
+            {
+                    MessageBox.Show("First Name is empty or is invalid");
+                    textBoxFirstName.Clear();
+                    textBoxFirstName.Focus();
+            }
+            else if(!Validator.IsEmpty(textBoxLastName.Text) || !Validator.IsValidName(textBoxLastName.Text))
+            {
+                MessageBox.Show("Last Name is empty or is invalid");
+                textBoxLastName.Clear();
+                textBoxLastName.Focus();
+            }
+            else if(!Validator.IsEmpty(textBoxjobTitle.Text) || !Validator.IsValidName(textBoxjobTitle.Text))
+            {
+                MessageBox.Show("Job title is empty or is invalid");
+                textBoxjobTitle.Clear();
+                textBoxjobTitle.Focus();
+            }
+            else
+            {
+                emp.EmployeeId = Convert.ToInt32(textBoxEmployeeID.Text);
+                emp.FirstName = textBoxFirstName.Text;
+                emp.LastName = textBoxLastName.Text;
+                emp.JobTitle = textBoxjobTitle.Text;
 
-            emp.SaveEmployee(emp);
+                emp.SaveEmployee(emp);
+            }
+                
+            
+
+            
 
         }
     }
