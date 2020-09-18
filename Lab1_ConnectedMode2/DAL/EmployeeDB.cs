@@ -48,12 +48,21 @@ namespace Lab1_ConnectedMode2.DAL
 
         }
 
-
-
-
-        public static List<Employee> LoadAllRecords()
+        public static void UpdateRecord(Employee emp)
         {
-            string query = $"SELECT * FROM Employees";
+            string query = $"UPDATE Employees SET FirstName = '{emp.FirstName}', LastName = '{emp.LastName}', JobTitle = '{emp.JobTitle}' WHERE EmployeeId = {emp.EmployeeId}";
+            SqlCommand cmd = prepareQuery(query);
+
+            cmd.ExecuteNonQuery();
+            connDB.Close();
+        }
+
+   
+
+
+        public static List<Employee> LoadAllRecords(string extQuery)
+        {
+            string query = $"SELECT * FROM Employees" + extQuery;
             SqlCommand cmd = prepareQuery(query);
             
             // ExecuteReader is used to execute the query, it returns a SqlDataReader object which contains the data from the table employees inside the database.

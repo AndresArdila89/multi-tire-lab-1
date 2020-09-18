@@ -17,16 +17,18 @@ namespace Lab1_ConnectedMode2.GUI
         public FormEmployee()
         {
             InitializeComponent();
+            loadTable("");
+            comboBoxSearch.SelectedIndex = 0;
 
             
         }
 
-        private void loadTable()
+        private void loadTable(string extQuery)
         {
             List<Employee> empslist = new List<Employee>();
             Employee records = new Employee();
 
-            empslist = records.LoadAllEmployees();
+            empslist = records.LoadAllEmployees(extQuery);
             listView1.Items.Clear();
             foreach (Employee em in empslist)
             {
@@ -75,7 +77,7 @@ namespace Lab1_ConnectedMode2.GUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            loadTable();
+            loadTable("");
             
         }
 
@@ -152,7 +154,7 @@ namespace Lab1_ConnectedMode2.GUI
 
 
                 clearAllTextbox();
-                loadTable();
+                loadTable("");
 
             }
    
@@ -170,8 +172,78 @@ namespace Lab1_ConnectedMode2.GUI
             emp.DeleteEmployee(emp);
             MessageBox.Show("employee deleted");
             clearAllTextbox();
-            loadTable();
+            loadTable("");
 
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            if (!Validator.IsValidId(textBoxEmployeeID.Text))
+            {
+                MessageBox.Show("invalida Employee ID");
+                textBoxEmployeeID.Clear();
+                textBoxEmployeeID.Focus();
+            }
+            else if (!Validator.IsEmpty(textBoxFirstName.Text) || !Validator.IsValidName(textBoxFirstName.Text))
+            {
+                MessageBox.Show("First Name is empty or is invalid");
+                textBoxFirstName.Clear();
+                textBoxFirstName.Focus();
+            }
+            else if (!Validator.IsEmpty(textBoxLastName.Text) || !Validator.IsValidName(textBoxLastName.Text))
+            {
+                MessageBox.Show("Last Name is empty or is invalid");
+                textBoxLastName.Clear();
+                textBoxLastName.Focus();
+            }
+            else if (!Validator.IsEmpty(textBoxjobTitle.Text) || !Validator.IsValidName(textBoxjobTitle.Text))
+            {
+                MessageBox.Show("Job title is empty or is invalid");
+                textBoxjobTitle.Clear();
+                textBoxjobTitle.Focus();
+            }
+            else
+            {
+                emp.EmployeeId = Convert.ToInt32(textBoxEmployeeID.Text);
+                emp.FirstName = textBoxFirstName.Text.Trim();
+                emp.LastName = textBoxLastName.Text.Trim();
+                emp.JobTitle = textBoxjobTitle.Text.Trim();
+
+                emp.UpdateEmployee(emp);
+
+                clearAllTextbox();
+                loadTable("");
+
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            int searchParam = comboBoxSearch.SelectedIndex;
+            string searchCriteria;
+            string val = textBoxSearch.Text.Trim();
+
+            switch (searchParam)
+            {
+                case 0:
+                    searchCriteria = "EmployeeId";
+                    break;
+                case 1:
+                    searchCriteria = "FirstName";
+                    break;
+                case 2:
+                    searchCriteria = "LastName";
+                    break;
+                default:
+                    searchCriteria = "EmployeeId";
+                    break;
+
+                    
+            }
+
+            string extQuery = $" WHERE {searchCriteria} = '{val}'";
+            loadTable(extQuery);
         }
     }
 }

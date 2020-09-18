@@ -30,9 +30,14 @@ namespace Lab1_ConnectedMode2.BLL
             EmployeeDB.DeleteRecord(emp);
         }
 
-        public List<Employee> LoadAllEmployees()
+        public List<Employee> LoadAllEmployees(string extQuery)
         {
-            return EmployeeDB.LoadAllRecords();
+            return EmployeeDB.LoadAllRecords(extQuery);
+        }
+
+        public void UpdateEmployee(Employee emp)
+        {
+            EmployeeDB.UpdateRecord(emp);
         }
     }
 }

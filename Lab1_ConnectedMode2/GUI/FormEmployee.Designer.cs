@@ -38,9 +38,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxjobTitle = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
@@ -153,19 +153,20 @@
             this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // button2
+            // buttonUpdate
             // 
-            this.button2.BackColor = System.Drawing.Color.Gold;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(337, 154);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 26);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonUpdate.BackColor = System.Drawing.Color.Gold;
+            this.buttonUpdate.FlatAppearance.BorderSize = 0;
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonUpdate.Location = new System.Drawing.Point(337, 154);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(67, 26);
+            this.buttonUpdate.TabIndex = 10;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -182,19 +183,20 @@
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // button4
+            // buttonSearch
             // 
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(337, 263);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 26);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonSearch.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonSearch.FlatAppearance.BorderSize = 0;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonSearch.Location = new System.Drawing.Point(337, 263);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(67, 26);
+            this.buttonSearch.TabIndex = 12;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // button5
             // 
@@ -319,9 +321,9 @@
             this.Controls.Add(this.comboBoxSearch);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxjobTitle);
@@ -353,9 +355,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxjobTitle;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.ComboBox comboBoxSearch;
