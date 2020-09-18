@@ -11,28 +11,40 @@ namespace Lab1_ConnectedMode2.DAL
 {
     public static class EmployeeDB
     {
-       public static void SaveRecord(Employee emp)
+        static SqlConnection connDB;
+
+        //The prepareQuery function establishes the connection to the database, recives the query and returns and SqlCommand Object.
+        private static SqlCommand prepareQuery(string query)
         {
-            SqlConnection connDB = UtilityDB.ConnectDB();
+            connDB = UtilityDB.ConnectDB();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connDB;
-            cmd.CommandText = $"INSERT INTO Employees (FirstName, LastName, JobTitle) VALUES('{emp.FirstName}','{emp.LastName}','{emp.JobTitle}')";
+            cmd.CommandText = query;
+
+            return cmd;
+        }
+
+
+       public static void SaveRecord(Employee emp)
+        {
+
+            string query = $"INSERT INTO Employees (FirstName, LastName, JobTitle) VALUES('{emp.FirstName}','{emp.LastName}','{emp.JobTitle}')";
+            SqlCommand cmd = prepareQuery(query);
             cmd.ExecuteNonQuery();
-      
+
             connDB.Close();
         }
 
         public static List<Employee> LoadAllRecords()
         {
-            List<Employee> empList = new List<Employee>();
+            string query = $"SELECT * FROM Employees";
+            SqlCommand cmd = prepareQuery(query);
             
-
-            SqlConnection connDB = UtilityDB.ConnectDB();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = connDB;
-            cmd.CommandText = $"SELECT * FROM Employees";
-            
+            // ExecuteReader is used to execute the query, it returns a SqlDataReader object which contains the data from the table employees inside the database.
             SqlDataReader result = cmd.ExecuteReader();
+            List<Employee> empList = new List<Employee>();
+
+            // The read metod is use to look inside the SqlDataReader object and assign its values to and object employee
             while (result.Read())
             {
                 Employee empTemp = new Employee();
@@ -40,7 +52,6 @@ namespace Lab1_ConnectedMode2.DAL
                 empTemp.FirstName = (string)result[1];
                 empTemp.LastName = (string)result[2];
                 empTemp.JobTitle = (string)result[3];
-
 
                 empList.Add(empTemp);
             }
