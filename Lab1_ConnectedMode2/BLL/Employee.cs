@@ -25,6 +25,11 @@ namespace Lab1_ConnectedMode2.BLL
             EmployeeDB.SaveRecord(emp);
         }
 
+        public void DeleteEmployee(Employee emp)
+        {
+            EmployeeDB.DeleteRecord(emp);
+        }
+
         public List<Employee> LoadAllEmployees()
         {
             return EmployeeDB.LoadAllRecords();

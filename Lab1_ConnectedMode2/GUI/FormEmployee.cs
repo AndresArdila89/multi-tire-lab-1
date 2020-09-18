@@ -21,18 +21,13 @@ namespace Lab1_ConnectedMode2.GUI
             
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void loadTable()
         {
             List<Employee> empslist = new List<Employee>();
             Employee records = new Employee();
 
-            empslist =  records.LoadAllEmployees();
-            
+            empslist = records.LoadAllEmployees();
+            listView1.Items.Clear();
             foreach (Employee em in empslist)
             {
 
@@ -44,9 +39,43 @@ namespace Lab1_ConnectedMode2.GUI
 
             }
 
-            
-            
+        }
 
+
+        private  void clearAllTextbox()
+        {
+            textBoxEmployeeID.Clear();
+            textBoxFirstName.Clear();
+            textBoxLastName.Clear();
+            textBoxjobTitle.Clear();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if( listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem item = listView1.SelectedItems[0];
+                textBoxEmployeeID.Text = item.SubItems[0].Text;
+                textBoxFirstName.Text = item.SubItems[1].Text;
+                textBoxLastName.Text = item.SubItems[2].Text;
+                textBoxjobTitle.Text = item.SubItems[3].Text;
+
+                textBoxEmployeeID.Enabled = false;
+
+         
+            }
+
+
+
+
+
+
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            loadTable();
             
         }
 
@@ -117,12 +146,31 @@ namespace Lab1_ConnectedMode2.GUI
                 emp.JobTitle = textBoxjobTitle.Text;
 
                 emp.SaveEmployee(emp);
-                
-            }
-                
-            
 
-            
+
+
+
+
+                clearAllTextbox();
+                loadTable();
+
+            }
+   
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmployeeId = Convert.ToInt32(textBoxEmployeeID.Text);
+            emp.FirstName = textBoxFirstName.Text;
+            emp.LastName = textBoxLastName.Text;
+            emp.JobTitle = textBoxjobTitle.Text;
+
+            emp.DeleteEmployee(emp);
+            MessageBox.Show("employee deleted");
+            clearAllTextbox();
+            loadTable();
 
         }
     }

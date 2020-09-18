@@ -30,10 +30,26 @@ namespace Lab1_ConnectedMode2.DAL
 
             string query = $"INSERT INTO Employees (FirstName, LastName, JobTitle) VALUES('{emp.FirstName}','{emp.LastName}','{emp.JobTitle}')";
             SqlCommand cmd = prepareQuery(query);
+            // ExecuteNonQuery method is used when no value is return from the database for example inserting a row.
             cmd.ExecuteNonQuery();
 
             connDB.Close();
         }
+
+
+
+        public static void DeleteRecord(Employee emp)
+        {
+            string query = $"DELETE FROM Employees WHERE EmployeeId = {emp.EmployeeId} ";
+            SqlCommand cmd = prepareQuery(query);
+
+            cmd.ExecuteNonQuery();
+            connDB.Close();
+
+        }
+
+
+
 
         public static List<Employee> LoadAllRecords()
         {
