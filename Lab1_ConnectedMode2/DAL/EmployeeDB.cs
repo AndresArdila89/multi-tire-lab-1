@@ -66,6 +66,28 @@ namespace Lab1_ConnectedMode2.DAL
             connDB.Close();
         }
 
+
+        public static Employee SearchRecord(int Id)
+        {
+            Employee emp = new Employee();
+            SqlConnection conn = UtilityDB.ConnectDB();
+            conn = UtilityDB.ConnectDB();
+            SqlCommand cmdSelect = new SqlCommand();
+            cmdSelect.CommandText = "SELECT * FROM Employees WHERE EmployeeId = @EmployeeId";
+            cmdSelect.Parameters.AddWithValue("@EmployeeId", Id);
+            SqlDataReader sqlReader = cmdSelect.ExecuteReader();
+
+            if (sqlReader.Read())
+            {
+                emp.EmployeeId = Convert.ToInt32(sqlReader["EmployeeId"]);
+                emp.FirstName = sqlReader["FirstName"].ToString();
+                emp.LastName = sqlReader["LastName"].ToString();
+                emp.JobTitle = sqlReader["JobTitle"].ToString();
+
+            }
+
+            return emp;
+        }
    
 
 
@@ -95,4 +117,4 @@ namespace Lab1_ConnectedMode2.DAL
             return empList;
         }
     }
-} 
+}
