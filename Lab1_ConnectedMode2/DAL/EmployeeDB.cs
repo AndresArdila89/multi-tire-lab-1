@@ -28,10 +28,19 @@ namespace Lab1_ConnectedMode2.DAL
        public static void SaveRecord(Employee emp)
         {
 
-            string query = $"INSERT INTO Employees (FirstName, LastName, JobTitle) VALUES('{emp.FirstName}','{emp.LastName}','{emp.JobTitle}')";
-            SqlCommand cmd = prepareQuery(query);
+            //string query = $"INSERT INTO Employees (FirstName, LastName, JobTitle) VALUES('{emp.FirstName}','{emp.LastName}','{emp.JobTitle}')";
+            //SqlCommand cmd = prepareQuery(query);
             // ExecuteNonQuery method is used when no value is return from the database for example inserting a row.
-            cmd.ExecuteNonQuery();
+
+            SqlConnection conn = UtilityDB.ConnectDB();
+            SqlCommand cmdInsert = new SqlCommand();
+            cmdInsert.CommandText = "INSERT INTO Employees(EmployeeId, FirstName, LastName,JobTitle) VALUES (@EmployeeId,@FirstName,@LastName,@JobTitle)";
+            cmdInsert.Parameters.AddWithValue("@EmployeeId", emp.EmployeeId);
+            cmdInsert.Parameters.AddWithValue("@FirstName", emp.FirstName);
+            cmdInsert.Parameters.AddWithValue("@LastName", emp.LastName);
+            cmdInsert.Parameters.AddWithValue("@JobTitle", emp.JobTitle);
+            cmdInsert.Connection = conn;
+            cmdInsert.ExecuteNonQuery();
 
             connDB.Close();
         }
